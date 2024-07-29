@@ -1,0 +1,15 @@
+.app {
+  text-align: center;
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 500px;
+}
+
+.error {
+  color: red;
+}
