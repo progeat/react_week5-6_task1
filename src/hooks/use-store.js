@@ -1,20 +1,21 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const initialState = {
-  email: '',
-  password: '',
-  repeatPassword: '',
-  messageError: '',
-  isValid: false,
+	email: "",
+	password: "",
+	repeatPassword: "",
 };
 
 export const useStore = () => {
-  const [state, setState] = useState(initialState);
+	const [state, setState] = useState(initialState);
 
-  return {
-    getState: () => state,
-    updateState: (fieldName, newValue) => {
-      setState({ ...state, [fieldName]: newValue });
-    },
-  };
+	return {
+		getState: () => state,
+		updateState: (fieldName, newValue) => {
+			setState({ ...state, [fieldName]: newValue });
+		},
+		resetState() {
+			setState(initialState);
+		},
+	};
 };
